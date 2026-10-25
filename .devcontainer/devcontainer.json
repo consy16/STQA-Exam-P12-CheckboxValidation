@@ -1,12 +1,14 @@
+
 {
   "name": "STQA Practical 12 Examination",
-  "image": "mcr.microsoft.com/devcontainers/java:1-21-bookworm",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
   "customizations": {
     "vscode": {
       "extensions": [
         "vscjava.vscode-java-pack"
       ]
     }
-  },
-  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y maven chromium chromium-driver"
+  }
 }
