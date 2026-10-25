@@ -1,1 +1,1 @@
-# STQA-Exam-P12-CheckboxValidation
+# STQA-Practical-12-CheckboxValidation
