@@ -1,6 +1,5 @@
 
 package practical;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -41,14 +40,11 @@ public class CheckboxValidationTest {
 
         // TASK 1: Identify all six checkboxes using a CSS selector.
         // TODO: Find all checkbox elements and store them in the list.
-        List<WebElement> checkboxes = List.of();
 
-        int totalCheckboxes = checkboxes.size();
-        int checkedCount = 0;
-        int uncheckedCount = 0;
-
+        
         // TASK 2: Count checked and unchecked checkboxes.
-        // TODO: Use a loop and if-else logic.
+        
+
 
         System.out.println("====================================");
         System.out.println("CHECKBOX IDENTIFICATION AND VALIDATION");
@@ -85,7 +81,7 @@ public class CheckboxValidationTest {
         WebElement javaCheckbox = driver.findElement(
         By.cssSelector("input[value='Java']"));
 
-        assertTrue(javaCheckbox.isSelected());
+            assertTrue(javaCheckbox.isSelected());
         javaCheckbox.click();
         assertFalse(javaCheckbox.isSelected());
 
