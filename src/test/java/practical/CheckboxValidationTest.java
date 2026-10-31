@@ -61,22 +61,44 @@ public class CheckboxValidationTest {
         assertEquals(2, checkedCount);
         assertEquals(4, uncheckedCount);
 
-        // TASK 3A: Locate the Python checkbox using its value.
-        // TODO: Find the Python checkbox using a CSS selector.
+        // Locate the Python checkbox using its value.
+        WebElement pythonCheckbox = driver.findElement(
+        By.cssSelector("input[value='Python']"));
+
+        
        WebElement pythonCheckbox = driver.findElement(
         By.cssSelector("input[value='TODO_PYTHON']"));
 
         // TODO: Verify it is initially unchecked, click it, and verify it is selected.
 
         // TASK 3B: Locate the Java checkbox using its value.
-        // TODO: Find the Java checkbox using a CSS selector.
+        assertFalse(pythonCheckbox.isSelected());
+        pythonCheckbox.click();
+        assertTrue(pythonCheckbox.isSelected());
+
         WebElement javaCheckbox = driver.findElement(
         By.cssSelector("input[value='TODO_JAVA']"));
 
         // TODO: Verify it is initially checked, click it, and verify it is deselected.
 
-        // TASK 4: Recalculate the final checked and unchecked counts.
-        // TODO: Reset the counters, then use a loop and if-else logic.
+        // Recalculate the final checked and unchecked counts.
+        WebElement javaCheckbox = driver.findElement(
+        By.cssSelector("input[value='Java']"));
+
+        assertTrue(javaCheckbox.isSelected());
+        javaCheckbox.click();
+        assertFalse(javaCheckbox.isSelected());
+
+        for (WebElement checkbox : checkboxes) 
+        {
+            if (checkbox.isSelected()) {
+            checkedCount++;
+            } 
+            else {
+        uncheckedCount++;
+    }
+}
+
 
         System.out.println("------------------------------------");
         System.out.println("FINAL CHECKBOX STATUS");
